@@ -1,0 +1,12 @@
+﻿<Window x:Class="MVVMessengerExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="clr-namespace:MVVMessengerExample"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+        <view:UserControl1 />
+        <view:UserControl2/>
+        </StackPanel>
+    </Grid>
+</Window>

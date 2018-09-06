@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using DevExpress.Xpf.Mvvm;
+using System.Windows.Input;
+
+namespace MVVMessengerExample
+{
+    public class ViewModal1
+    {
+        public ViewModal1()
+        {
+            Name = "I m sender";
+            SendMessageCommand = new DelegateCommand(OnMessageSent);
+        }
+
+        public ICommand SendMessageCommand { get; set; }
+
+        public string Name { get; set; }
+
+        public void OnMessageSent()
+        {
+            Messenger.Default.Send<string>(Name);
+        }
+
+    }
+}
